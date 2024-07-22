@@ -1,0 +1,82 @@
+.home
+{
+    visibility: visible;
+}
+.info{
+    visibility: hidden;
+}
+
+.name{
+    width: 300px;
+    height: 170px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.788);
+    border-radius: 20px;
+    font-size: 30px;
+    color: white;
+    margin-bottom: 20px;
+}
+.email{
+    height: 50px;
+    width: 500px;
+    font-size: 30px;
+    color: white;
+    margin: 30px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 20px;
+    
+    background-color: rgba(0, 0, 0, 0.788);
+  
+  
+}
+
+.billing-form
+{
+    margin-top: 20px;
+    height: 700px;
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.699);
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+
+}
+
+.form-subbox
+{
+    color: white;
+    display: grid;
+    grid-template-columns: 150px 500px;
+    align-items: center;
+    
+}
+
+.form-subbox > input{
+    height: 60px;
+    width: 250px;
+    padding-left: 30px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.993);
+}
+
+.form-subbox > textarea{
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.submit-btn{
+    padding: 20px;
+    border: none;
+    background-color: red;
+    color: white;
+    transition: background-color 0.75s;
+}
+.submit-btn:hover{
+    background-color: black;
+
+}

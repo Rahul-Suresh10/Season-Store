@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <script src="https://kit.fontawesome.com/970c139854.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <%- include("../elements/header.ejs")%>
+    <main>
+        <div class="ad">
+
+            <div class="slider">
+                <img src="assets/images/Designer.jpeg" alt="" loading="lazy">
+                <img src="assets/images/Designer.jpeg" alt="" loading="lazy">
+                <img src="assets/images/Designer.jpeg" alt="" loading="lazy">
+                <img src="assets/images/Designer.jpeg" alt="" loading="lazy">
+                <img src="assets/images/Designer.jpeg" alt="" loading="lazy">
+                <img src="assets/images/Designer.jpeg" alt="" loading="lazy">
+                <img src="assets/images/Designer.jpeg" alt="" loading="lazy">
+            </div>
+
+        </div>
+        <form action="/filter-season" class="season-options" method="post">
+            <button class="s-opt summer" type="submit" name="summer">
+                <img src="assets/icons/sun.gif" alt="">
+                <p>Summer</p>
+            </button>
+            <button class="s-opt rainy" type="submit" name="monsoon">
+                <img src="assets/icons/rain.gif" alt="">
+                <p>Monsoon</p>
+            </button>
+            <button class="s-opt winter" type="submit" name="winter">
+                <img src="assets/icons/snowman.gif" alt="">
+                <p>Winter</p>
+            </button>
+            <button class="s-opt winter" type="submit" name="allseason">
+                <img src="assets/icons/calendar.gif" alt="">
+                <p>ALL</p>
+            </button>
+        </form>
+
+      <div class="items-grid">
+            
+
+            <%items.forEach((item)=>{ %>
+                <form class="item" method="post" action="/add-to-cart">
+                    <img src=<%=item.image%> alt="" loading="lazy">
+                    <p>From <%=item.name%></p>
+                    <p>Price <span style="color: red;"><%=item.price%></span></p>
+                    <p><span style="color: red;"><%=item.stock_quantity%></span> stock left</p>
+                    <button type="submit" name="addToCart-btn" value=<%=item.product_id%>>Add to cart</button>
+                </form>
+           <% })%>
+        
+          
+
+        </div>
+
+ 
+
+    </main>
+
+    <%- include("../elements/footer.ejs") %>
+   
+
+    
+</body>
+</html>

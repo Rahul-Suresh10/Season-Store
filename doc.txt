@@ -1,0 +1,80 @@
+image created using microsoft designer
+
+weatherAPI used
+
+Tables in Cloth Store Database
+
+Products
+
+product_id (Primary Key)
+name
+description
+price
+category_id (Foreign Key referencing Categories table)
+stock_quantity
+created_at
+updated_at
+
+Categories
+
+category_id (Primary Key)
+name
+description
+created_at
+updated_at
+
+Customers
+
+customer_id (Primary Key)
+first_name
+last_name
+email
+phone_number
+address
+created_at
+updated_at
+
+Orders
+
+order_id (Primary Key)
+customer_id (Foreign Key referencing Customers table)
+order_date
+total_amount
+status (e.g., pending, shipped, delivered)
+created_at
+updated_at
+
+Order Items
+
+order_item_id (Primary Key)
+order_id (Foreign Key referencing Orders table)
+product_id (Foreign Key referencing Products table)
+quantity
+unit_price
+total_price
+
+Reviews
+
+review_id (Primary Key)
+product_id (Foreign Key referencing Products table)
+customer_id (Foreign Key referencing Customers table)
+rating
+comment
+created_at
+updated_at
+
+Relationships
+Products and Categories: One-to-many relationship where each product belongs to one category, and a category can have multiple products.
+Customers and Orders: One-to-many relationship where each customer can place multiple orders, but each order belongs to only one customer.
+Orders and Order Items: One-to-many relationship where each order can have multiple order items, but each order item belongs to only one order.
+Products and Reviews: One-to-many relationship where each product can have multiple reviews, but each review belongs to only one product.
+Additional Considerations
+Authentication and Authorization: Implement user authentication for customers and potentially staff members accessing the system.
+Payment Integration: Handle payment details securely and possibly integrate with payment gateways.
+Inventory Management: Track stock levels and handle inventory updates based on orders.
+Data Integrity: Ensure data consistency through foreign key constraints and appropriate indexing for efficient querying.
+
+
+
+
+

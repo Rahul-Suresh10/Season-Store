@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/info.css">
+    <script src="https://kit.fontawesome.com/970c139854.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <%- include("../elements/header.ejs")%>
+    <main>
+
+
+        <div class="name">
+            <p>Hi,</p>
+            <p>Rahul Suresh</p>
+        </div>
+        <div class="email">
+            Rahulsv1010@gmail.com
+        </div>
+        
+        <form action="/getBillingDetails" method="post" class="billing-form">
+
+            <div class="form-subbox">
+                <label for="phone">Phone</label>
+                <input type="number" name="phone" placeholder="6238501467">
+            </div>
+
+            <div class="form-subbox">
+                <label for="Address">Address</label>
+               <textarea type="text" name="address" rows="3" cols="33" placeholder="Marksons Road"></textarea>
+            </div>
+
+            <div class="form-subbox">
+                <label for="pincode">Pin Code</label>
+                <input type="number" name="pincode" placeholder="670004">
+            
+            </div>
+
+            <input type="submit" class="submit-btn">
+
+        </form>
+        
+    </main>
+  
+    <%- include("../elements/footer.ejs")%>
+
+
+
+
+    
+</body>
+</html>

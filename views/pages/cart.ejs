@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/cart.css">
+    <script src="https://kit.fontawesome.com/970c139854.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <%- include("../elements/header.ejs")%>
+    <main>
+        <div class="cart-list">
+
+            <p style="font-size: 35px;font-weight: bold;color: white;">Cart</p>
+
+          
+            <% cartItems.forEach((item)=>{%>
+                <form action="/cart-item-action" method="post" class="cart-item-form">
+                    <div class="cart-item">
+                        <img src=<%= item.image %> alt="">
+                         <div class="cart-item-info">
+                            <p>Price <span><%=item.price%></span></p>
+                            <p><%= item.name %></p>
+                            <p><%= item.product_id %></p>
+                         </div>
+                        <button class="cart-item-remove-btn" name="Remove-btn" type="submit" value=<%=item.product_id%>>Remove</button>
+                        <button class="cart-item-remove-btn" name="Buy-btn" value=<%=item.id%>>Buy now</button>
+                    </div>
+                </form>
+            <%})%>
+
+        </div>
+    </main>
+  
+    <footer>
+
+    </footer>
+
+
+
+
+    
+</body>
+</html>

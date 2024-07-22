@@ -1,0 +1,109 @@
+
+
+body
+{
+   background: url("../assets/images/loginbg.jpeg");
+
+   background-position:center;
+
+
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   
+}
+
+
+.login-form
+{
+ 
+
+  width: 400px;
+  height: 50vh;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  backdrop-filter: blur(30px);
+
+  min-width: 300px;
+  min-height: 350px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.726);
+
+
+}
+
+.form-heading{
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.781);
+    font-size: 30px;
+    font-family: monospace;
+}
+
+.form-subbox
+{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    font-size: 15px;
+   
+}
+.form-subbox > .inp
+{
+    border: none;
+    width: 220px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.719);
+    color: rgba(0, 0, 0, 0.829);
+    font-weight: bold;
+    padding: 10px 10px 10px 10px;
+    padding-left: 40px;
+    position: relative;
+}
+
+.form-subbox > label
+{
+    color: white;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-subbox > i
+{
+  position: absolute;
+  top: 35px;
+  left: 10px;
+
+
+}
+.submit{
+ padding: 10px;
+ border-radius: 90px 5px / 30px 90px;
+ border: none;
+ background-color: black;
+ color: white;
+ transition:  background-color 0.75s, transform 0.75s;
+}
+.submit:hover
+{
+    box-shadow: 0 0 10px black;
+    background-color: red;
+    transform: scale(1.1);
+   
+}
+
+
+@media screen and (max-width : 450px) {
+
+    .login-form
+    {
+    
+        width: 350px;
+
+    }
+    
+}

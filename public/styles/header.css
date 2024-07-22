@@ -1,0 +1,160 @@
+
+header
+{
+
+    position: fixed;
+    left: 20px;
+    right: 20px;
+    top: 10px;
+    height: 90px;
+    background-color: rgba(255, 255, 255, 0.877);
+
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: 2;
+}
+
+.left
+{
+    width: 300px;
+    height: 80px;
+    text-align: center;
+
+  
+}
+
+.left > p {
+    font-size: 30px;
+    font-weight: bold;
+    color: rgba(230, 81, 81, 0.904);
+}
+
+
+.center{
+    width: 500px;
+    
+    position: relative;
+}
+
+
+.search-bar
+{
+  width: 650px;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  padding-right: 70px;
+  padding-left: 20px;
+  background-color: white;
+  font-size: 20px;
+
+ color: darkred;
+ font-family: monospace;
+  
+}
+
+
+.search-button{
+    position: absolute;
+    right: -150px;
+    top: 0px;
+    height: 50px;
+    width: 60px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: background-color 0.75s, color 0.75s;
+    border: none;
+    
+    background-color: rgba(230, 81, 81, 0.904);
+    color: white;
+    
+}
+
+.search-button:hover
+{
+    background-color: black;
+    color: white;
+}
+
+
+
+.right
+{
+    width:450px;
+    height: 90px;
+   
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.right a
+{
+    text-decoration: none;
+   
+    color: rgba(230, 81, 81, 0.904);
+}
+ 
+
+.right a:active
+{
+    background-color: red;
+    color: white;
+}
+
+.right .right-btn
+{
+    height: 100%;
+    width: 70px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: white;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.123);
+    transition: box-shadow 0.75s;
+}
+.right-btn:hover
+{
+    opacity: 0.8;
+    color: red;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.514);
+}
+
+.account-name
+{
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 25px;
+    transition: background-color 0.75s, color 0.75s;
+
+}
+
+.account-name:hover
+{
+    background-color: black;
+    color: white;
+}
+.cart{
+    position: relative;
+}
+
+.cart-count{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 25px;
+    height: 25px;
+    border-radius: 12.5px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.63);
+   
+  
+}
